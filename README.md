@@ -16,11 +16,12 @@ java k_ary.K_ary p o r i d c
 Eg: java k_ary.K_ary 16 100000 1000 9 1 90
 
 where
-	p is the number of threads you want to create
-	o is the total number of operations to be performer by the threads
-	r (>0) is the upper limit of the key range that will be inserted into the search tree (contention parameter). 
+
+	- p is the number of threads you want to create
+	- o is the total number of operations to be performed by the threads
+	- r (>0) is the upper limit of the key range that will be inserted into the search tree (contention parameter)
 		(Keys in the range (0-r) will be randomly inserted, searched for and deleted from the tree)
-	i:d:c is the ratio of insert:delete:contains operations 
+	- i:d:c is the ratio of insert:delete:contains operations 
 	(a typical application will involve lots of contains() operations, few inserts() and even fewer deletes())
 	
 The program will output the total run time (sum of the times taken by each thread) in milliseconds
